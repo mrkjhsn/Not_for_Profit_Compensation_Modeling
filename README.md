@@ -1,5 +1,3 @@
-# Not_for_Profit_Compensation_Modeling
-
 ## Predicting Executive Salary at Not-for-Profit Organizations
 
 #### How much should a not-for-profit organization pay it's top management?  Not-for-profit organizations are devoted to myriads of causes and have a huge amount of variablity (mission, revenue, number of volunteers, ect.).  This makes predicting executive salary within these organizations a compelling challenge, and one that machine learning is well suited to make a contribution towards.
