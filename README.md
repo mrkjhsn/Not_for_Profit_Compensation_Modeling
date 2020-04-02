@@ -17,7 +17,9 @@ The IRS has [guidlines](https://www.irs.gov/charities-non-profits/exempt-organiz
 
 Organizations filing a Form 990 are instructed to report compensation information for current (and some former) officers, directors, trustees, key employees (>150K), and five highest compensated (>100K) employees.
 
-My interest in this topic stems from an infomercial I watched a number of years ago.  A charismatic person was raising money for a highly sympathetic cause.  But something about his organization did seem right.  I did a google search.  One of the first results was from a not-for-profit watchdog organization that gave this persons not-for-profit a low score because of the excessive salary this person was awarding himself as the director of the organization.  It occured to me that many not-for-profit organizations with lofty sounding missions may just be fronts for dubious people enriching myselves by appealing to unsuspecting donors.  
+The United States has approximately 1.5M not-for-profit organizations.  Advocating for causes that are highly sympathetic, these organizations easily pull at the heartstrings of donors.  But how is that money being spent?
+
+[Charity Navigator](https://www.charitynavigator.org/) has used a numbers-based rating system to score over 9,000 not-for-profits.  A model that could predict a reasonable salary executive salary could provide additional information to aid in their efforts to promote not-for-profit accountability.  
 
 ### Research questions:
 
