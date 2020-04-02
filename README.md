@@ -19,10 +19,20 @@ Organizations filing a Form 990 are instructed to report compensation informatio
 
 The United States has approximately 1.5M not-for-profit organizations.  Advocating for causes that are highly sympathetic, these organizations easily pull at the heartstrings of donors.  But how is that money being spent?
 
-[Charity Navigator](https://www.charitynavigator.org/) has used a numbers-based rating system to score over 9,000 not-for-profits.  A model that could predict a reasonable salary executive salary could provide additional information to aid in their efforts to promote not-for-profit accountability.  
+Orgnizations such as [Charity Navigator](https://www.charitynavigator.org/index.cfm?bay=content.view&cpid=628) are already playing a big role in promoting responsible giving by providing a rating system for not-for-profits that provides an assessment of the organizations health, accountability, and transparency.  The model I have created through this project is designed as a tool to further augment responsible giving my highlighting not-for-profits that are awarding exectivites disproportionately.  
 
 ### Research questions:
 
 1. Based on the unique characteristics of a not-for-profit, what should it be paying it's top executives?  
 1. Is there a correlation between organizations with lax governance standards and disproportionate executive compensation?
 1. Am I able to identify organizations who are likely paying their management more than they should?
+
+### What Made This Project Challenging:
+1. Many people who choose to be involved with not-for-profits have reasons different than those who choose to be involved in for-profit organizations.
+ 1. The organization might represent a cause they care deeply about, as a result the executive is willing to receive less in monetary compensation.
+ 1. Leadership of the not-for-profit may provide an ego boost in place of a competitive salary.  An exeutive may be more interested in the ego boost than monetary compensation.
+1. Not-for-profits often raise a large share of their money through the connections of it's top managers.  It's hard to quantify the value of connections.
+
+1.  The crossover between for-profit organizations and not-for-profit organizations is much less distinct than I fully appreciated.  Many not-for-profits, such as hospitals, are very similar to for-profits in terms of financial resources and complexity.  As a result, many of these types of not-for-profits pay executives a salary comperable to what they would make managing a similarly sized for-profit organization.
+
+1. Many features that I thought would be more beneficial for classification purposes proved to not be effective at all.  For instance 501 Subsection categories are highly lopsided towards 501(c)(3) organizations.  The specific cause the the not-for-profit is dedicated to (NTEE categories) also were minimally effective in decide salary category.
