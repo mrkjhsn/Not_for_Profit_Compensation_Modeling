@@ -1,0 +1,5 @@
+,0
+C,0.01
+max_iter,500
+penalty,l2
+solver,newton-cg
