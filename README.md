@@ -10,7 +10,6 @@ These datasets have excellent documentation about what the attributes mean, and 
 
 In addition to the executive compensation dataset, I used the governance dataset to get additional information about the governance of the organizations paying the executives in the executive dataset.  The governance dataset is mostly made up yes/no responses as to whether the not-for-profit has specific controls in place (conflict of interest policy, whistleblower policy, ect.)
 
-
 ### Motivations:
 
 The IRS has [guidlines](https://www.irs.gov/charities-non-profits/exempt-organization-annual-reporting-requirements-meaning-of-reasonable-compensation) on compensation of top executives.  Specifically, it states "Reasonable compensation is the value that would ordinarily be paid for like services by like enterprises under like circumstances".  This leaves room for a wide latitude of interpretation.
@@ -35,4 +34,10 @@ Orgnizations such as [Charity Navigator](https://www.charitynavigator.org/index.
 
 1.  The crossover between for-profit organizations and not-for-profit organizations is much less distinct than I fully appreciated.  Many not-for-profits, such as hospitals, are very similar to for-profits in terms of financial resources and complexity.  As a result, many of these types of not-for-profits pay executives a salary comperable to what they would make managing a similarly sized for-profit organization.
 
-1. Many features that I thought would be more beneficial for classification purposes proved to not be effective at all.  For instance 501 Subsection categories are highly lopsided towards 501(c)(3) organizations.  The specific cause the the not-for-profit is dedicated to (NTEE categories) also were minimally effective in decide salary category.
+1. Many features that I thought would be more beneficial for classification purposes proved to not be effective at all.  For instance 501 Subsection categories are highly lopsided towards 501(c)(3) organizations.  The specific cause of the not-for-profit is dedicated to (NTEE categories) also were minimally effective in decide salary category.
+
+### General Project Reflections
+1. Organizing and structuring a project with lots of moving parts - I kept asking myself how I can organize things to make it easier for someone to follow the methodology of my project in an intuitve way.
+1. I used numpy more than I ever have before, it was fun peaking under the Pandas hood and becoming more comfortable with ndarrays.  Rather than simply convert them into pandas DataFrames, I had fun pushing myself to work with the array natively in numpy.
+1. The primary datset I was working with was over 4M rows.  In the past I would have imported all the data, then narrowed the dataset.  From a memory perspective this is innefficient.  Instead, I imported only a handful of rows for the full dataset, based on the columns I was interested in with the end goal of predicting my target variable I imported the entirety of the columns I felt would be useful.
+1.  The project was frustrating in the sense that I wasn't able to get the classification accuracy I was expecting.  But it pushed me to go farther with the feature engineering and modeling than I otherwise would have.  
