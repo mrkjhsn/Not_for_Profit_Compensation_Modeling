@@ -2,7 +2,7 @@
 
 #### How much should a not-for-profit organization pay it's top management?  Not-for-profit organizations have a huge amount of variablity (mission, revenue, number of volunteers, ect.).  This makes predicting executive salary within these organizations a compelling challenge, one that machine learning is well suited to make a contribution towards.
 
-### Data source:
+### Data Source:
 
 The data for this project was aquired from [Open990](https://www.open990.org/catalog/), an organization that aggregates and provides not-for-profit tax return data made public by the IRS.  Open990 also provides not-for-profit analytics services with this data for a [fee](https://appliednonprofitresearch.com/customdata/).  
 
@@ -20,11 +20,42 @@ The United States has approximately 1.5M not-for-profit organizations.  Advocati
 
 Orgnizations such as [Charity Navigator](https://www.charitynavigator.org/index.cfm?bay=content.view&cpid=628) are already playing a big role in promoting responsible giving by providing a rating system for not-for-profits that provides an assessment of the organizations health, accountability, and transparency.  The model I have created through this project is designed as a tool to further augment responsible giving my highlighting not-for-profits that are awarding exectivites disproportionately.  
 
-### Research questions:
+### Research Questions:
 
 1. Based on the unique characteristics of a not-for-profit, what should it be paying it's top executives?  
-1. Is there a correlation between organizations with lax governance standards and disproportionate executive compensation?
-1. Am I able to identify organizations who are likely paying their management more than they should?
+1. Am I able to identify organizations who are likely paying their management more or less than they should?
+
+### Project Overview/Results:
+The salary distribution was not a normal distribution.
+
+![](https://github.com/mrkjhsn/Not_for_Profit_Compensation_Modeling/blob/master/03.visualizations/reportable_comp_hist.png)
+
+After box-cox transforming, I determined 10 salary category levels using Jenks natural breaks.
+
+![](https://github.com/mrkjhsn/Not_for_Profit_Compensation_Modeling/blob/master/03.visualizations/box_cox_target_bins.png)
+
+The number of executives that fell into each category was more distributed after using box-cox and Jenks.
+
+![](https://github.com/mrkjhsn/Not_for_Profit_Compensation_Modeling/blob/master/03.visualizations/category_breaks_dist.png)
+
+Taking the inverse of the box-cox values, these are the $ salary cut off points for each category.
+
+![](https://github.com/mrkjhsn/Not_for_Profit_Compensation_Modeling/blob/master/03.visualizations/salary_category_schedule.png)
+
+Random Forrest Classifier was the model that provided the best performance (Train, Test Score: .35, .26).
+
+![](https://github.com/mrkjhsn/Not_for_Profit_Compensation_Modeling/blob/master/03.visualizations/heat_map_rfc.png)
+![](https://github.com/mrkjhsn/Not_for_Profit_Compensation_Modeling/blob/master/03.visualizations/rfc_feature_importance.png)
+
+Gradient Boost Classifier didn't perform as well, but it had a lower generalization gap (Train, Test Score: .283, .25), and relied much more heavily on only one feature.
+
+![](https://github.com/mrkjhsn/Not_for_Profit_Compensation_Modeling/blob/master/03.visualizations/heat_map_gbc.png)
+![](https://github.com/mrkjhsn/Not_for_Profit_Compensation_Modeling/blob/master/03.visualizations/gbc_feature_importance.png)
+
+Despite feature engineering and parameter tuning my model accuracy is very low.  However, my model still has usefull benefits highlighting outlier salaries, or providing a range of salaries that correspond to the categories identified by my model.
+
+![](https://github.com/mrkjhsn/Not_for_Profit_Compensation_Modeling/blob/master/03.visualizations/pred_probaba_dist.png)
+![](https://github.com/mrkjhsn/Not_for_Profit_Compensation_Modeling/blob/master/03.visualizations/classification_hist_kde_median_marker.png)
 
 ### What Made This Project Challenging:
 1. Many people who choose to be involved with not-for-profits have reasons different than those who choose to be involved in for-profit organizations.
